@@ -24,3 +24,10 @@ Then build and start the docker container with:
 $ sudo docker build -t ddns-update-server .
 $ sudo docker run -dp 8143:8143 ddns-update-server
 ```
+
+Now update the DDNS with
+
+```
+GET https://example.com:8143/passwd=PASSWORD
+```
+
