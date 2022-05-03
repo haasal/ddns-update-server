@@ -15,3 +15,10 @@ So create the file `/secrets/ddns-web-passwd` on your system and paste in a **ha
 The PSK authorizes a client to make changes to the DNS table.
 
 Copy an SSL certificate to the location specified at the end of `main.go`. Make sure your user has sufficient **read** permissions for these files.
+
+Then build and start the docker container with:
+
+```bash
+$ sudo docker build -t ddns-update-server .
+$ sudo docker run -dp 8143:8143 ddns-update-server
+```
