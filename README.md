@@ -28,6 +28,6 @@ $ sudo docker run -dp 8143:8143 ddns-update-server
 Now update the DDNS with
 
 ```
-GET https://example.com:8143&passwd=PASSWORD
+GET https://example.com:8143?passwd=PASSWORD
 ```
 
