@@ -10,7 +10,7 @@ import (
 )
 
 func authenticate(r *http.Request) bool {
-	passwd := []byte(r.URL.Query().Get("passwd"))
+	passwd := []byte(r.URL.Query().Get("ddns-web-passwd"))
 	hasher := sha256.New()
 	hasher.Write(passwd)
 	hashed_passwd := hex.EncodeToString(hasher.Sum(nil))
