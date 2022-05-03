@@ -2,6 +2,8 @@
 
 This repo is a web server for updating a dyndns service as described in [this](https://dev.to/haasal/set-up-your-own-ddns-server-with-bind9-and-go-193o) blogpost.
 
+The server isn't really production ready yet and rather serves as a proof of concept. At the moment please use it as a template/starting point.
+
 ## Security
 
 If you spot any vulnerabilities please start an issue.
