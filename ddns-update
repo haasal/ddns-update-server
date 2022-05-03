@@ -1,4 +1,4 @@
-KEYFILE=/secrets/ddnskey
+KEYFILE=ddnskey
 NAMESERVER="ns.example.com"
 ZONE="home.ddns.example.com"
 TTL="200"

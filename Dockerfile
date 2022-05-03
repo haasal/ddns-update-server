@@ -7,6 +7,8 @@ WORKDIR /var/www/server
 
 COPY /secrets/ddns-web-passwd .
 COPY /secrets/ddnskey .
+COPY /secrets/server.cer .
+COPY /secrets/server.key .
 COPY go.mod .
 COPY main.go .
 COPY ddns-update .
