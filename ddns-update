@@ -1,0 +1,20 @@
+KEYFILE=/secrets/ddnskey
+NAMESERVER="ns.example.com"
+ZONE="home.ddns.example.com"
+TTL="200"
+
+if [ -z "$1" ]
+then
+  IPADDR="`curl -s ifconfig.me`"
+else
+  IPADDR="$1"
+fi
+
+(
+  echo "server $NAMESERVER"
+  echo "update delete $ZONE A"
+  echo "update add $ZONE $TTL A $IPADDR"
+  echo "send"
+) | nsupdate -k /secrets/ddnskey
+
+# EOF
